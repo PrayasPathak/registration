@@ -10,15 +10,11 @@
             <div class="flex flex-col mb-10 lg:items-start items-center">
                 <div
                     class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                        stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                    </svg>
+                    <i class="fa-regular fa-id-card"></i>
                 </div>
                 <div class="flex-grow">
-                    <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Shooting Stars</h2>
-                    <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan
-                        taxidermy. Gastropub indxgo juice poutine.</p>
+                    <h2 class="text-gray-900 text-lg title-font font-medium mb-3"></h2>
+                    <p class="leading-relaxed text-base">Enter your information to get registered for national id.</p>
                     <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                             stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
@@ -38,9 +34,9 @@
                     </svg>
                 </div>
                 <div class="flex-grow">
-                    <h2 class="text-gray-900 text-lg title-font font-medium mb-3">The Catalyzer</h2>
-                    <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan
-                        taxidermy. Gastropub indxgo juice poutine.</p>
+                    <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Save Time</h2>
+                    <p class="leading-relaxed text-base">NID is a one stop for all your documents and credentials. Use
+                        NID for gaining unlimited access </p>
                     <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                             stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
