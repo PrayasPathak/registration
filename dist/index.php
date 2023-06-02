@@ -13,6 +13,7 @@
     <?php require "hero.php"?>
     <?php require "companies.php"?>
     <div id="about"><?php require "about.php"?></div>
+    <?php require "contact.php"?>
     <?php require "footer.php"?>
 </body>
 

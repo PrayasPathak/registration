@@ -4,7 +4,7 @@
 
 <link rel="stylesheet" href="./style.css">
 
-<section class="text-gray-600 body-font">
+<section class="text-gray-900">
     <h2 class="text-3xl text-center p-4">How to get started?</h2>
     <div class="container px-5 py-24 mx-auto flex flex-wrap">
         <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
@@ -17,7 +17,7 @@
                     <i class="fa-regular fa-id-card"></i>
                 </div>
                 <div class="flex-grow">
-                    <h2 class="text-gray-900 text-lg title-font font-medium mb-3"></h2>
+                    <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Easy Registration</h2>
                     <p class="leading-relaxed text-base">Enter your information to get registered for national id.</p>
                     <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"

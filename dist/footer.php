@@ -7,36 +7,38 @@
 
 <link rel="stylesheet" href="./style.css">
 
-<footer class="bg-slate-900 text-slate-100">
-    <main class="flex gap-5 justify-around p-3">
-        <section class="flex flex-col items-center">
+<footer class="bg-slate-900 text-slate-100 p-2">
+    <main class="lg:flex lg:flex-row gap-5 lg:justify-around flex">
+        <section class="flex flex-col items-center gap-3 ">
             <h3 class="text-2xl">Useful Link</h3>
-            <ul>
+            <ul class="flex flex-col gap-2">
                 <li>
-                    <a href="./index.php"
-                        class="hover:underline hover:underline-offset-4 transition-all duration-300">Home</a>
+                    <a href="https://nepal.gov.np/" target="_blank"
+                        class="hover:underline hover:underline-offset-4 transition-all duration-300">Government of
+                        Nepal</a>
                 </li>
                 <li>
-                    <a href="./index.php"
-                        class="hover:underline hover:underline-offset-4 transition-all duration-300">Home</a>
+                    <a href="https://www.immigration.gov.np/" target="_blank"
+                        class="hover:underline hover:underline-offset-4 transition-all duration-300">Immigration</a>
                 </li>
                 <li>
-                    <a href="./index.php"
-                        class="hover:underline hover:underline-offset-4 transition-all duration-300">Home</a>
+                    <a href="https://mohp.gov.np/np" target="_blank"
+                        class="hover:underline hover:underline-offset-4 transition-all duration-300">Health</a>
                 </li>
             </ul>
         </section>
         <!-- Contact Us Section -->
         <section>
             <h3 class="text-2xl">Contact Us</h3>
-            <ul>
-                <p>Email: <a href="#">info@gov.np.com</a></p>
+            <ul class="p-2">
+                <p class="text-md"><i class="fa-solid fa-circle-envelope"></i><a href="#">info@gov.np.com</a></p>
+                <p class="text-md"><i class="fa-solid fa-phone"></i> +977-4262696</p>
             </ul>
         </section>
         <!-- Social Media Section -->
         <section>
             <h3 class="text-2xl">Social Media</h3>
-            <ul class="flex gap-4 mt-3">
+            <ul class="flex lg:gap-4 mt-3 gap-2">
                 <li><a href="#"><i class="fa-brands fa-twitter hover:text-sky-600"></i></a></li>
                 <li><a href="#"><i class="fa-brands fa-linkedin hover:text-sky-600"></i></a></li>
                 <li><a href="#"><i class="fa-brands fa-facebook hover:text-sky-600"></i></a></li>
