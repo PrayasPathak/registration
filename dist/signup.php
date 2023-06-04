@@ -15,8 +15,9 @@
         $district = stripslashes($_POST['district']);
         $municipality_name = stripslashes($_POST['municipalname']);   
         $wardno= stripslashes($_POST['wardno']);
+        $date = date('Y-m-d: H:i:s');
 
-        $insert = "INSERT INTO users (`first_name`, `last_name`, `email`, `citizenship_number`, `temporary_address`, `permanent_address`, `nationality`, `district_name`, `municipality_name`, `ward_no`) VALUES('$first_name', '$last_name', '$email', '$citizenship_number', '$temporary_address', '$permanent_address', '$nationality', '$district', '$municipality_name', '$wardno')";
+        $insert = "INSERT INTO users (`first_name`, `last_name`, `email`, `citizenship_number`, `temporary_address`, `permanent_address`, `nationality`, `district_name`, `municipality_name`, `ward_no`, `issued_date`) VALUES('$first_name', '$last_name', '$email', '$citizenship_number', '$temporary_address', '$permanent_address', '$nationality', '$district', '$municipality_name', '$wardno','$date')";
 
         $result = mysqli_query($con, $insert);
         if($result){

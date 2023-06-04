@@ -11,7 +11,17 @@
         if($num_rows > 0){
             $row = mysqli_fetch_assoc($result);
             if(password_verify($citizenship_number, $row['citizenship_number'])){
-                $_SESSION['info'] = $row;
+                $_SESSION['first_name'] = $row['first_name'];
+                $_SESSION['last_name'] = $row['last_name'];
+                $_SESSION['email'] = $row['email'];
+                $_SESSION['citizenship_number'] = $citizenship_number;
+                $_SESSION['temporary_address'] = $row['temporary_address'];
+                $_SESSION['permanent_address'] = $row['permanent_address'];
+                $_SESSION['nationality'] = $row['nationality'];
+                $_SESSION['district_name'] = $row['district_name'];
+                $_SESSION['municipality_name'] = $row['municipality_name'];
+                $SESSION['ward_number'] = $row['ward_no'];
+                $_SESSION['issued_date'] = $row['issued_date'];
                 $_SESSION['isLoggedIn'] = true;
                 header('Location: nid.php');
             }else{
