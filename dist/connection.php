@@ -1,8 +1,9 @@
 <?php 
+    session_start();
     $host = "localhost";
     $username = "root";
     $user_password = '';
     $database = 'registration';
 
-    $conn = new mysqli($host, $username, $user_password, $database);
+    $con = mysqli_connect($host, $username, $user_password, $database);
 ?>
