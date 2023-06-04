@@ -6,8 +6,10 @@
             <p class="text-center text-stone-950 text-lg md:text-xl md:p-3 leading-relaxed">Get all your personal data
                 in a single place. Stress less for the need to carry documents everywhere you go. National ID reduces
                 the fear of loss of documents and can be used everywhere.</p>
-            <button
-                class="bg-indigo-500 text-white w-20 rounded-lg p-2 m-1 hover:bg-indigo-700 duration-200 delay-50 text-lg md:text-md">Register</button>
+            <a href="./signup.php">
+                <button type="submit"
+                    class="bg-indigo-500 text-white w-20 rounded-lg p-2 m-1 hover:bg-indigo-700 duration-200 delay-50 text-lg md:text-md">Register</button>
+            </a>
         </div>
         <div>
             <img src="./img/queue_2.jpg" alt="People Waiting in a queue" class="rounded-md">

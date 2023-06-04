@@ -1,3 +1,31 @@
+<?php 
+    include "connection.php";
+
+
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $citizenship_number = $_POST['citizenshipno'];
+        $email = $_POST['email'];
+        
+        $query = "SELECT * FROM users WHERE email = $email";
+
+        $result = mysqli_query($conn, $query);
+        $num_rows = mysqli_num_rows($result);
+        if($num_rows > 0){
+            $row = mysqli_fetch_assoc($result);
+            if(password_verify($citizenship_number, $row['citizenship_number'])){
+                $_SESSION['info'] = $row;
+                header('Location: nid.php');
+            }else{
+                echo "Incorrect Password";
+            }
+        }else{
+            echo "User Doesnot exist";
+        }
+
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,14 +50,15 @@
                 <h2 class="text-3xl underline underline-offset-[12px] text-blue-600 mt-6">Login</h2>
                 <form action="./signin.php" method="post" class="flex flex-col gap-4 justify-center items-center mt-6">
                     <div class="mt-4">
-                        <input type="text" placeholder="Citizenship Number" required
+                        <input type="text" placeholder="Citizenship Number" required name="citizenshipno" maxlength="11"
                             class="bg-slate-200 outline-none p-2 h-10">
                     </div>
                     <div class="mt-4">
-                        <input type="email" placeholder="Email" required class="bg-slate-200 outline-none h-10 p-2">
+                        <input type="email" placeholder="Email" required class="bg-slate-200 outline-none h-10 p-2"
+                            name="email">
                     </div>
                     <div class="mt-4 flex flex-col gap-3">
-                        <button
+                        <button type="submit"
                             class="p-2 text-md text-slate-100 bg-blue-600 duration-200 transition-all hover:bg-blue-900 hover:text-white rounded-lg w-full">Login</button>
                         <p>Haven't registered? <a href="./signup.php"
                                 class="text-sm hover:underline hover:underline-offset-4 text-blue-500 font-semibold">Register</a>
