@@ -1,30 +1,30 @@
-<?php 
-    include "connection.php";
-
+<?php
+    require "connection.php";
 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        $citizenship_number = $_POST['citizenshipno'];
+        $citizenship_number = $_POST['citizenship_no'];
         $email = $_POST['email'];
+        $query = "select * from users where email = '$email'";
         
-        $query = "SELECT * FROM users WHERE email = $email";
-
-        $result = mysqli_query($conn, $query);
+        $result = mysqli_query($con, $query);
         $num_rows = mysqli_num_rows($result);
         if($num_rows > 0){
             $row = mysqli_fetch_assoc($result);
             if(password_verify($citizenship_number, $row['citizenship_number'])){
                 $_SESSION['info'] = $row;
+                $_SESSION['isLoggedIn'] = true;
                 header('Location: nid.php');
             }else{
                 echo "Incorrect Password";
+                echo $row['citizenship_number']."<br>";
+                echo password_hash($citizenship_number, PASSWORD_BCRYPT);
             }
         }else{
             echo "User Doesnot exist";
         }
-
     }
-
-?>
+    // 12378012331
+ ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -50,7 +50,7 @@
                 <h2 class="text-3xl underline underline-offset-[12px] text-blue-600 mt-6">Login</h2>
                 <form action="./signin.php" method="post" class="flex flex-col gap-4 justify-center items-center mt-6">
                     <div class="mt-4">
-                        <input type="text" placeholder="Citizenship Number" required name="citizenshipno" maxlength="11"
+                        <input type="number" placeholder="Citizenship Number" required name="citizenship_no" maxlength="11"
                             class="bg-slate-200 outline-none p-2 h-10">
                     </div>
                     <div class="mt-4">

@@ -18,7 +18,7 @@
 
         $insert = "INSERT INTO users (`first_name`, `last_name`, `email`, `citizenship_number`, `temporary_address`, `permanent_address`, `nationality`, `district_name`, `municipality_name`, `ward_no`) VALUES('$first_name', '$last_name', '$email', '$citizenship_number', '$temporary_address', '$permanent_address', '$nationality', '$district', '$municipality_name', '$wardno')";
 
-        $result = mysqli_query($conn, $insert);
+        $result = mysqli_query($con, $insert);
         if($result){
             header('Location: ./signin.php');
         }else{
@@ -43,7 +43,7 @@
 
 <body>
     <?php require "header.php";?>
-    <section class="flex justify-center items-center">
+    <section class="flex justify-center items-center mb-8">
         <div id="form" class="p-4 rounded-xl shodow-md w-90">
             <form action="./signup.php" class="flex flex-col gap-4" method="post">
                 <h2 class="text-blue-700 text-3xl font-semibold my-4 underline underline-offset-[12px]">Register</h2>
@@ -61,7 +61,7 @@
                     <input type="email" placeholder="Email" name="email"
                         class="bg-slate-200 shadow-slate-300 shadow-md outline-none rounded-sm p-2" required>
                     <!-- Citizenship Number -->
-                    <input type="text" placeholder="Citizenship Number" maxlength="11"
+                    <input type="number" placeholder="Citizenship Number" maxlength="11"
                         class="bg-slate-200 shadow-slate-300 shadow-md outline-none rounded-sm p-2"
                         name="citizenship_no" required>
                 </div>
@@ -78,7 +78,7 @@
                     <input type="text" placeholder="Nationality" name="nationality"
                         class="bg-slate-200 shadow-slate-300 shadow-md outline-none rounded-sm p-2">
                     <!-- District Name -->
-                    <input type="text" placeholder="District Name" name="districtname"
+                    <input type="text" placeholder="District Name" name="district"
                         class="bg-slate-200 shadow-slate-300 shadow-md outline-none rounded-sm p-2">
                 </div>
 
@@ -87,7 +87,7 @@
                     <input type="text" placeholder="Municipality Name" name="municipalname"
                         class="bg-slate-200 shadow-slate-300 shadow-md outline-none rounded-sm p-2">
                     <!-- Ward Number-->
-                    <input type="number" placeholder="Ward Number" name="wardno" maxlength="2"
+                    <input type="number" placeholder="Ward Number" name="wardno" maxlength="2" min=0
                         class="bg-slate-200 shadow-slate-300 shadow-md outline-none rounded-sm p-2">
                 </div>
 
